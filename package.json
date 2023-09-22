@@ -1,0 +1,16 @@
+{
+  "name": "poc-megraton-tests",
+  "version": "1.0.0",
+  "description": "robozao testando tudo",
+  "main": "index.js",
+  "scripts": {
+      "automate-test": "mocha automate.test.js",
+      "tests-e2e": "mocha mocha.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "puppeteer": "^21.3.4"
+  }
+}

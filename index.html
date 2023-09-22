@@ -1,0 +1,86 @@
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input, textarea {
+    padding: 8px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Candidato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cadastro de Candidato</h1>
+    <form id="cadastroForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+        
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" required>
+        
+        <label for="experiencia">Experiência:</label>
+        <textarea id="experiencia" required></textarea>
+        
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        var nome = document.getElementById('nome').value;
+        var email = document.getElementById('email').value;
+        var telefone = document.getElementById('telefone').value;
+        var experiencia = document.getElementById('experiencia').value;
+    
+        console.log('Nome:', nome);
+        console.log('E-mail:', email);
+        console.log('Telefone:', telefone);
+        console.log('Experiência:', experiencia);
+    
+        // Simula o envio do formulário
+        // Aqui você poderia enviar os dados para o servidor
+    
+        // Adiciona uma classe de sucesso ao formulário
+        var sucessoElement = document.createElement('div');
+        sucessoElement.className = 'sucesso';
+        sucessoElement.innerText = 'Candidato cadastrado com sucesso!';
+        document.getElementById('cadastroForm').appendChild(sucessoElement);
+    });
+    
+    </script>
+</body>
+</html>
+
+
